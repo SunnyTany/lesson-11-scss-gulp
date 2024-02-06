@@ -1,8 +1,33 @@
+@use "../presets" as * ;
+
 .header {
   margin-top: 4.875rem;
 
   &__toggle {
     display: none;
+
+    &:checked + .header__hamburger .header__top-bun {
+      transform: rotate(-45deg);
+      margin-top: 25px;
+      background-color: $bg-color;
+    }
+
+    &:checked + .header__hamburger .header__bottom-bun {
+      opacity: 0;
+      transform: rotate(45deg);
+      background-color: $bg-color;
+    }
+
+    &:checked + .header__hamburger .header__meat {
+      transform: rotate(45deg);
+      margin-top: -7px;
+      background-color: $bg-color;
+    }
+
+    &:checked + .header__hamburger + .header__hamb-nav {
+      top: 0;
+      transform: scale(1);
+    }
   }
 
   &__hamburger {
@@ -115,25 +140,4 @@
       color: $blue-color;
     }
   }
-}
-
-#toggle:checked + .header__hamburger .header__top-bun {
-  transform: rotate(-45deg);
-  margin-top: 25px;
-  background-color: $bg-color;
-}
-#toggle:checked + .header__hamburger .header__bottom-bun {
-  opacity: 0;
-  transform: rotate(45deg);
-  background-color: $bg-color;
-}
-#toggle:checked + .header__hamburger .header__meat {
-  transform: rotate(45deg);
-  margin-top: -7px;
-  background-color: $bg-color;
-}
-
-#toggle:checked + .header__hamburger + .header__hamb-nav {
-  top: 0;
-  transform: scale(1);
 }
