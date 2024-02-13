@@ -1,11 +1,5 @@
-@use "presets/variables";
-@use "presets/skin";
-@use "common/reset";
-@use "common/typografy";
-@use "common/classes";
+@use "presets/index";
+@use "common/index";
 @use "header/header";
-@use "main/first-screen";
-@use "main/about";
-@use "main/experience";
-@use "main/video";
+@use "main/index";
 @use "footer/footer";
